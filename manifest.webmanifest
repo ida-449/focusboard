@@ -1,0 +1,10 @@
+{
+  "name": "FocusBoard",
+  "short_name": "FocusBoard",
+  "description": "无需注册、打开即用的个人任务空间。",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f3f0e8",
+  "theme_color": "#276247",
+  "icons": [{ "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}

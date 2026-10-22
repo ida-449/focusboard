@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#276247" />
+    <meta name="description" content="无需注册、打开即用的个人任务空间。" />
+    <title>FocusBoard · 打开即用的任务空间</title>
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon" href="icon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="hero">
+        <span class="eyebrow">FOCUSBOARD</span>
+        <h1>打开就能用，<br />每个人都有自己的空间。</h1>
+        <p>无需注册。任务只保存在当前浏览器，其他访问者看不到你的内容。</p>
+      </header>
+      <section class="board" aria-labelledby="board-title">
+        <div class="privacy-note"><strong>本机独立空间</strong><span>清除浏览器数据或更换设备后无法找回；请勿记录重要或敏感信息。</span></div>
+        <div class="board-heading">
+          <div><span class="date" id="today"></span><h2 id="board-title">我的今日任务</h2></div>
+          <div class="counter" aria-live="polite"><strong id="remaining">0</strong><span>项待完成</span></div>
+        </div>
+        <form id="task-form" class="task-form">
+          <label class="sr-only" for="task-title">任务名称</label>
+          <input id="task-title" maxlength="120" autocomplete="off" placeholder="例如：整理本周客户反馈" required />
+          <button type="submit">添加任务</button>
+        </form>
+        <p id="message" class="message" role="status" aria-live="polite"></p>
+        <ul id="task-list" class="task-list" aria-label="任务列表"></ul>
+        <div id="empty" class="empty"><div class="empty-mark">✓</div><h3>这里还没有任务</h3><p>添加第一项任务，马上开始。</p></div>
+      </section>
+      <footer>数据不上传服务器 · 可添加到手机或电脑主屏幕</footer>
+    </main>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

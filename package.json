@@ -1,0 +1,6 @@
+{
+  "name": "focusboard-public",
+  "private": true,
+  "type": "module",
+  "scripts": { "test": "node --test", "check": "node --check app.js && node --check storage.js && node --check service-worker.js" }
+}
